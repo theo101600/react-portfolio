@@ -91,6 +91,7 @@ html {
 
 body {
   font-family: "Roboto Mono", monospace;;
+  background-color: var(--color-dark-0);
   color: var(--color-grey-700);
 
   transition: color 0.3s, background-color 0.3s;

@@ -1,32 +1,29 @@
 import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
-// import Aurora from "../ui/Aurora";
 import Squares from "../ui/Squares";
 import styled from "styled-components";
 import Header from "../ui/Header";
 import Button from "../ui/Button";
 
-const StyledHomepage = styled.div`
+const StyledMainContainer = styled.div`
   position: relative;
 `;
 
-const StyledBackground = styled.div`
+const SquaresBackground = styled.div`
+  position: absolute;
+  z-index: 0; // behind everything
   background-color: var(--color-dark-1);
-  height: 100vh;
-  width: 100vw;
-  position: fixed;
-  z-index: -1;
 `;
 
-const StyledHomepageContent = styled.div`
+const StyledHomepage = styled.div`
+  color: var(--color-text-light);
   position: relative;
-  z-index: 1;
+  z-index: 10;
 `;
-
 const StyledContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  color: var(--color-text-light);
+
   h1 {
     font-family: "Ubuntu Mono", monospace;
     font-weight: 400;
@@ -63,24 +60,17 @@ const StyledSocials = styled.div`
 
 function Homepage() {
   return (
-    <StyledHomepage>
-      <StyledBackground>
+    <StyledMainContainer>
+      <SquaresBackground>
         <Squares
-          speed={0.4}
+          speed={0.5}
           squareSize={40}
           direction="down" // up, down, left, right, diagonal
-          borderColor="#000"
+          borderColor="var(--color-dark-2)"
           hoverFillColor="#669BBC"
         />
-        {/* <Aurora
-          colorStops={["#C1121F", "#669BBC", "#003049", "#780000"]}
-          blend={0.5}
-          amplitude={1.0}
-          speed={0.5}
-        /> */}
-      </StyledBackground>
-
-      <StyledHomepageContent>
+      </SquaresBackground>
+      <StyledHomepage>
         <Header />
         <StyledContainer>
           <div>
@@ -101,8 +91,8 @@ function Homepage() {
           <AiFillGithub size={50} />
           <AiFillLinkedin size={50} />
         </StyledSocials>
-      </StyledHomepageContent>
-    </StyledHomepage>
+      </StyledHomepage>
+    </StyledMainContainer>
   );
 }
 

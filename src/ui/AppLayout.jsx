@@ -4,7 +4,6 @@ import MainPanel from "./MainPanel";
 
 const StyledAppLayout = styled.div`
   background-color: var(--color-dark-0);
-  height: 100vh;
   padding: 2.4rem;
   display: grid;
   grid-template-columns: 20% 80%;

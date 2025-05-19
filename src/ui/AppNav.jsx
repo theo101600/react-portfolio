@@ -12,17 +12,16 @@ const NavList = styled.ul`
   display: flex;
   flex-direction: row;
   gap: 4rem;
+  margin-left: 2rem;
   font-family: "Roboto", sans-serif;
   font-size: 16px;
-  margin-left: 2rem;
-  margin-right: 35rem;
   font-weight: 100;
 `;
 const StyledSpan = styled.span`
   text-transform: uppercase;
 `;
 const StyledNavLink = styled(NavLink)`
-  padding: 10% 4rem;
+  padding: 2rem 4rem;
   &:hover,
   &:active,
   &.active:link,

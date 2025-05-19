@@ -15,15 +15,21 @@ const StyledMainPanel = styled.div`
 `;
 const StyledAppHeader = styled.header`
   height: 50px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+  display: inline-grid;
+  grid-template-columns: 35% 65%;
+  grid-template-rows: 60px 15px;
+  margin-bottom: 3rem;
+
   h1 {
     margin: 1.5rem auto;
     font-family: "Ubuntu", sans-serif;
     font-weight: 500;
     font-style: normal;
+  }
+  div {
+    background-color: var(--color-primary);
+    width: 12rem;
+    height: 15px;
   }
 `;
 
@@ -42,6 +48,7 @@ function MainPanel() {
       <StyledAppHeader>
         <h1>{currentURL.charAt(0).toUpperCase() + currentURL.slice(1)}</h1>
         <AppNav />
+        <div></div>
       </StyledAppHeader>
       <Outlet />
     </StyledMainPanel>

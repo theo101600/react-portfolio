@@ -1,11 +1,18 @@
 import styled from "styled-components";
 import SkillCard from "../ui/SkillCard";
+import WebDevIcon from "../assets/icons/WebDevIcon";
+import ThreeDPrinting from "../assets/icons/ThreeDPrinting";
+import ElectronicsIcon from "../assets/icons/ElectronicsIcon";
+import WebDesignIcon from "../assets/icons/WebDesignIcon";
+import ThreeDModeling from "../assets/icons/ThreeDModeling";
 
 const StyledAbout = styled.div`
   padding: 3rem 5rem;
   height: 100%;
+  overflow: scroll;
   p {
     font-family: "Roboto", sans-serif;
+    font-weight: 200;
     font-size: 18px;
   }
   h1 {
@@ -18,8 +25,9 @@ const StyledAbout = styled.div`
 `;
 const StyledSkillContainer = styled.div`
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   flex-wrap: wrap;
+  margin: 2rem 0;
 `;
 
 function About() {
@@ -44,7 +52,7 @@ function About() {
       <h1>What I'm Doing</h1>
       <StyledSkillContainer>
         <SkillCard>
-          <img src="/web-development.svg" />
+          <WebDevIcon />
           <div>
             <h2>Web Development</h2>
             <span>
@@ -54,7 +62,7 @@ function About() {
         </SkillCard>
 
         <SkillCard>
-          <img src="/web-design.svg" />
+          <WebDesignIcon />
           <div>
             <h2>Web Design</h2>
             <span>Figma and photoshop to plan and design web apps.</span>
@@ -62,7 +70,7 @@ function About() {
         </SkillCard>
 
         <SkillCard>
-          <img src="/3d-modeling.svg" />
+          <ThreeDModeling />
           <div>
             <h2>3D Modeling</h2>
             <span>
@@ -72,7 +80,7 @@ function About() {
         </SkillCard>
 
         <SkillCard>
-          <img src="3d-printing.svg"></img>
+          <ThreeDPrinting />
           <div>
             <h2>3d Printing</h2>
             <span>Experience with using 3d printer, Ulitimaker S5.</span>
@@ -80,7 +88,7 @@ function About() {
         </SkillCard>
 
         <SkillCard>
-          <img src="3d-printing.svg"></img>
+          <ElectronicsIcon />
           <div>
             <h2>Circuit Design</h2>
             <span>

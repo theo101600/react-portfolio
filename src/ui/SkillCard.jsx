@@ -2,12 +2,12 @@ import styled from "styled-components";
 
 const StyledSkillCard = styled.div`
   display: flex;
-  width: 48%;
+  width: 40%;
   justify-content: space-around;
   align-items: center;
   background-color: var(--color-dark-2);
   border-radius: 8px;
-  margin: 1rem 0;
+  margin: 1rem 1rem;
   padding: 2rem;
   h2 {
     font-family: "Roboto", sans-serif;
@@ -22,8 +22,12 @@ const StyledSkillCard = styled.div`
     font-weight: 100;
     margin: 0;
   }
-  img {
-    height: 100px;
+  svg {
+    fill: var(--color-text-light);
+    margin: 0 3rem;
+  }
+  div {
+    margin: 2rem 2rem;
   }
 `;
 
