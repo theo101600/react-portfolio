@@ -5,13 +5,13 @@ const StyledLogo = styled.div`
   text-align: center;
 `;
 const Img = styled.img`
-  height: 5rem;
+  height: 7rem;
 `;
 
 function Logo() {
   return (
     <StyledLogo>
-      <Img src="/letter-t-logo.svg" />
+      <Img src="/Logo.png" />
     </StyledLogo>
   );
 }

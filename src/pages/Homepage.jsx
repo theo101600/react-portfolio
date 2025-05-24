@@ -4,8 +4,9 @@ import Squares from "../ui/Squares";
 import styled from "styled-components";
 import Header from "../ui/Header";
 import Button from "../ui/Button";
+import { motion } from "framer-motion";
 
-const StyledHomepage = styled.div`
+const StyledHomepage = styled(motion.div)`
   position: relative;
 `;
 
@@ -13,14 +14,10 @@ const StyledBackground = styled.div`
   background-color: var(--color-dark-1);
   height: 100vh;
   width: 100vw;
-  position: fixed;
-  z-index: -1;
+  position: absolute;
 `;
 
-const StyledHomepageContent = styled.div`
-  position: relative;
-  z-index: 1;
-`;
+const StyledHomepageContent = styled.div``;
 
 const StyledContainer = styled.div`
   display: flex;
@@ -33,6 +30,9 @@ const StyledContainer = styled.div`
     font-style: normal;
     font-size: 96px;
     line-height: 10rem;
+    position: relative;
+    z-index: 5;
+    pointer-events: none;
   }
   h2 {
     font-family: "Ubuntu Mono", monospace;
@@ -40,18 +40,25 @@ const StyledContainer = styled.div`
     font-style: normal;
     font-size: 78px;
     line-height: 10rem;
+    position: relative;
+    z-index: 5;
+    pointer-events: none;
   }
 `;
 const Img = styled.img`
   margin: 5rem;
   width: 600px;
   pointer-events: none;
+  position: relative;
+  z-index: 5;
 `;
 
 const StyledButtonContainer = styled.div`
   display: flex;
   justify-content: center;
   margin-top: 3rem;
+  position: relative;
+  z-index: 5;
 `;
 const StyledSocials = styled.div`
   display: flex;
@@ -59,11 +66,19 @@ const StyledSocials = styled.div`
   margin-top: 4rem;
   color: var(--color-text-light);
   gap: 2rem;
+  svg {
+    position: relative;
+    z-index: 5;
+  }
 `;
 
 function Homepage() {
   return (
-    <StyledHomepage>
+    <StyledHomepage
+    // initial={{ y: "50%" }}
+    // animate={{ y: "0" }}
+    // exit={{ y: "" }}
+    >
       <StyledBackground>
         <Squares
           speed={0.4}
